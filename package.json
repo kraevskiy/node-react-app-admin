@@ -16,10 +16,13 @@
     "react",
     "passport"
   ],
-  "author": "kraievskyi",
+  "author": "Kraievskiy Illia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kraevskiy/node-react-app-admin/issues"
   },
-  "homepage": "https://github.com/kraevskiy/node-react-app-admin#readme"
+  "homepage": "https://github.com/kraevskiy/node-react-app-admin#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
