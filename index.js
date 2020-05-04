@@ -5,7 +5,7 @@ const keys = require('./config/keys')
 
 async function start(){
   try {
-    mongoose.connect(keys.MONGO_URI, {
+    await mongoose.connect(keys.MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false
