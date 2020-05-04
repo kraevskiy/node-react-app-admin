@@ -4,7 +4,7 @@ const keys = require('../config/keys')
 const User = require('../models/User')
 const errorHandler = require('../utils/errorHandler')
 
-module.exports.login = async function (req, res) {
+module.exports.login = async (req, res) => {
   try {
     const candidate = await User.findOne({email: req.body.email})
     if (candidate) {
@@ -33,7 +33,7 @@ module.exports.login = async function (req, res) {
   }
 }
 
-module.exports.register = async function (req, res) {
+module.exports.register = async (req, res) => {
   try {
     const candidate = await User.findOne({email: req.body.email})
     if (candidate) {
