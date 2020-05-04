@@ -2,6 +2,7 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const keys = require('../config/keys')
 const User = require('../models/User')
+const errorHandler = require('../utils/errorHandler')
 
 module.exports.login = async function (req, res) {
   try {
@@ -28,7 +29,7 @@ module.exports.login = async function (req, res) {
       })
     }
   } catch (e) {
-    console.log('In route login something went wrong', e)
+    errorHandler(res, e)
   }
 }
 
@@ -50,6 +51,6 @@ module.exports.register = async function (req, res) {
       res.status(201).json(user)
     }
   } catch (e) {
-    console.log('In route register something went wrong', e)
+    errorHandler(res, e)
   }
 }
