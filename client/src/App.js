@@ -1,23 +1,17 @@
 import React from 'react'
-import {BrowserRouter as Router} from "react-router-dom"
-import {Button} from "react-materialize"
-import Routes from './routes'
-import TopBar from "./components/TopBar"
+import {BrowserRouter} from "react-router-dom"
+import AuthLayout from "./hoc/Layouts/AuthLayout"
 
 function App() {
-  const testFetch = async () =>{
-    await fetch('/api/category')
-      .then(res => {
-        console.log(res);
-      })
+  const isAuth = () => {
+    return false
   }
   return (
-    <div className="App">
-      <Router>
-        <TopBar />
-        <Routes />
-      </Router>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        {isAuth() ? null : <AuthLayout/>}
+      </div>
+    </BrowserRouter>
   );
 }
 
