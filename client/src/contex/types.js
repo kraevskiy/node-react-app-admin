@@ -1,0 +1,6 @@
+export const LOGOUT = 'LOGOUT'
+export const LOGIN = 'LOGIN'
+export const ERROR = 'ERROR'
+export const AUTOLOGIN = 'AUTOLOGIN'
+export const CLEAR_ERROR = 'CLEAR_ERROR'
+export const SET_LOADING = 'SET_LOADING'

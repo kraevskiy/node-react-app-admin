@@ -1,0 +1,7 @@
+.progress.fixedLoader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: 0;
+  height: 5px;
+}
